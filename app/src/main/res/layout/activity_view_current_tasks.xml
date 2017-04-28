@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="au.edu.utas.www.organiserapp.ViewCurrentTasks">
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="100dp" />
 </android.support.constraint.ConstraintLayout>
