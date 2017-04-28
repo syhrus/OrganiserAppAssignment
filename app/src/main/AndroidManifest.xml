@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TaskEnterScreen" />
+        <activity android:name=".ViewCurrentTasks" />
+        <activity android:name=".TMQ"></activity>
     </application>
 
 </manifest>
