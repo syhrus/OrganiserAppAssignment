@@ -45,7 +45,10 @@
         android:text="Upcoming Deadlines"
         android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/AddAppointmentButton"
-        tools:layout_editor_absoluteX="83dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <ListView
         android:layout_width="0dp"
@@ -62,16 +65,19 @@
         android:id="@+id/AddAppointmentButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Add Appointment"
+        android:layout_marginTop="16dp"
+        android:text="Add Task"
         app:layout_constraintTop_toBottomOf="@+id/TodayCommitmentsList"
-        tools:layout_editor_absoluteX="115dp" />
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/ViewAllTasksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="View All Tasks"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -81,10 +87,10 @@
         android:id="@+id/TMQButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="24dp"
         android:layout_marginTop="16dp"
         android:text="Time Management Quiz"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList" />
+        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList"
+        app:layout_constraintLeft_toRightOf="@+id/ViewAllTasksButton"
+        android:layout_marginLeft="8dp" />
 
 </android.support.constraint.ConstraintLayout>
