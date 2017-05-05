@@ -11,3 +11,4 @@ public class ViewCurrentTasks extends AppCompatActivity {
         setContentView(R.layout.activity_view_current_tasks);
     }
 }
+//comment
