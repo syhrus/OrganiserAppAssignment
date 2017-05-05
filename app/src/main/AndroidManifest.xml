@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".TaskEnterScreen" />
         <activity android:name=".ViewCurrentTasks" />
-        <activity android:name=".TMQ"></activity>
+        <activity android:name=".TMQ" />
+        <activity android:name=".ViewAllTasks"></activity>
     </application>
 
 </manifest>
