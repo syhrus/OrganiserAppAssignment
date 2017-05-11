@@ -15,12 +15,28 @@
         tools:layout_editor_absoluteY="46dp">
 
         <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Time Management Questionaire" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Short-Range Planning " />
+
+        <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Question 1"
+            android:text="1. Do you make a list of the things you have to do each day? "
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -79,7 +95,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Question 2"
+            android:text="2. Do you plan your day before you start it? "
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="204dp" />
 
@@ -135,7 +151,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 3" />
+            android:text="3. Do you make a schedule of the activities you have to do on work days? " />
 
         <RadioGroup
             android:id="@+id/radGroup3"
@@ -189,7 +205,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 4" />
+            android:text="4. Do you write a set of goals for yourself for each day? " />
 
         <RadioGroup
             android:id="@+id/radGroup4"
@@ -243,7 +259,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 5" />
+            android:text="5. Do you spend time each day planning? " />
 
         <RadioGroup
             android:id="@+id/radGroup5"
@@ -297,7 +313,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 6" />
+            android:text="6. Do you have a clear idea of what you want to accomplish during the next week? " />
 
         <RadioGroup
             android:id="@+id/radGroup6"
@@ -351,7 +367,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 7" />
+            android:text="7. Do you set and honor priorities? " />
 
         <RadioGroup
             android:id="@+id/radGroup7"
@@ -401,12 +417,21 @@
         </RadioGroup>
 
         <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Time Attitudes " />
+
+        <EditText
             android:id="@+id/editText12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 8" />
+            android:text='1. Do you often find yourself doing things which interfere with your schoolwork simply because you hate to say "No" to people? * ' />
 
         <RadioGroup
             android:id="@+id/radGroup8"
@@ -461,7 +486,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 9" />
+            android:text="2. Do you feel you are in charge of your own time, by and large? " />
 
         <RadioGroup
             android:id="@+id/radGroup9"
@@ -516,7 +541,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 10" />
+            android:text="3. On an average class day do you spend more time with personal grooming than doing schoolwork?* " />
 
         <RadioGroup
             android:id="@+id/radGroup10"
@@ -571,7 +596,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 11" />
+            android:text="4. Do you believe that there is room for improvement in the way you manage your time? * " />
 
         <RadioGroup
             android:id="@+id/radGroup11"
@@ -626,7 +651,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 12" />
+            android:text="5. Do you make constructive use of your time? " />
 
         <RadioGroup
             android:id="@+id/radGroup12"
@@ -681,7 +706,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 13" />
+            android:text="6. Do you continue unprofitable routines or activities?* " />
 
         <RadioGroup
             android:id="@+id/radGroup13"
@@ -731,12 +756,20 @@
         </RadioGroup>
 
         <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Time Management Questionaire" />
+
+        <EditText
             android:id="@+id/editText22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 14" />
+            android:text="1. Do you usually keep your desk clear of everything other than what you are currently working on? " />
 
         <RadioGroup
             android:id="@+id/radGroup14"
@@ -791,7 +824,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 15" />
+            android:text="2. Do you have a set of goals for the entire quarter? " />
 
         <RadioGroup
             android:id="@+id/radGroup15"
@@ -901,7 +934,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 17" />
+            android:text="4. When you have several things to do, do you think it is best to do a little bit of work on each one? " />
 
         <RadioGroup
             android:id="@+id/radGroup17"
@@ -956,7 +989,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="q 18" />
+            android:text="5. Do you regularly review your class notes, even when a test is not imminent? " />
 
         <RadioGroup
             android:id="@+id/radGroup18"
