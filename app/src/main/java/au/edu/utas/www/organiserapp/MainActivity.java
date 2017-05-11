@@ -37,15 +37,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button btn = (Button)findViewById(R.id.TMQButton);
+        Button tmqBtn = (Button)findViewById(R.id.TMQButton);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        tmqBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TMQ.class));
             }
         });
-        
+
+        Button allTaskBtn = (Button)findViewById(R.id.ViewAllTasksButton);
+
+        allTaskBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ViewAllTasks.class));
+            }
+        });
+
+
+
+        Button addScreenBtn = (Button)findViewById(R.id.AddAppointmentButton);
+
+        addScreenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TaskEnterScreen.class));
+            }
+        });
+
+
 
         taskObject newTask0 = new taskObject();
 
