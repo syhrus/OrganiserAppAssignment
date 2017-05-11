@@ -1,11 +1,14 @@
 package au.edu.utas.www.organiserapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -34,7 +37,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Button btn = (Button)findViewById(R.id.TMQButton);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TMQ.class));
+            }
+        });
         
 
         taskObject newTask0 = new taskObject();
