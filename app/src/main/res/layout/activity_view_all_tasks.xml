@@ -13,12 +13,12 @@
         android:text="All Tasks"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.413" />
+        app:layout_constraintHorizontal_bias="0.501" />
 
     <ListView
         android:id="@+id/AllTasksList"

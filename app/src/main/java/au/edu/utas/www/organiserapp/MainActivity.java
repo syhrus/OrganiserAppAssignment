@@ -2,40 +2,33 @@ package au.edu.utas.www.organiserapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Vector ;
-//import java.util.Collection;
-
-
+import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView todaysComms;
 
-    List<taskObject> myList = new ArrayList<taskObject>(); // list of tasks
-
-
-
-
-
-
+    List<taskObject> todayList = new Vector<taskObject>(); //Local list for today's variables
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Button tmqBtn = (Button)findViewById(R.id.TMQButton);
 
@@ -67,58 +60,27 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        // Create a calendar object that will convert the date and time value in milliseconds to date.
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(System.currentTimeMillis());
 
-        taskObject newTask0 = new taskObject();
+        todayList = ((GlobalVariables) this.getApplication()).getTasksBeforeDate(calendar.getTime());
 
-        newTask0.name = "a";
-        newTask0.description = "assignment0";
-
-        taskObject newtask1 = new taskObject();
-
-        newtask1.name = "b";
-        newtask1.description = "assignment1";
-
-        taskObject newTask2 = new taskObject();
-
-        newTask2.name = "c";
-        newTask2.description = "assignment2";
-
-
-
-       // newTask.dueDate = new Date(2017,05,02);
-
-        myList.add(newTask0);
-        myList.add(newtask1);
-        myList.add(newTask2);
-
-       // for (int i = 0; i < 3; i++){
-
-      //  Log.d("test",myList.get(i).name);
-      //  Log.d("test",myList.get(i).description);
-      //  }
-        
-        
-        
-        
-        
         todaysComms = (ListView) findViewById(R.id.TodayCommitmentsList);
-                
-         taskViewAdapter adapter = new taskViewAdapter(this, android.R.layout.simple_list_item_1,myList)  ;
-         todaysComms.setAdapter(adapter);
-                
-                
-                
+        taskViewAdapter adapter = new taskViewAdapter(this, android.R.layout.simple_list_item_1,todayList)  ;
+        todaysComms.setAdapter(adapter);
+        AdapterView.OnItemClickListener todayCommsListner = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Commitments view", "You clicked Item: " + todayList.get((int)id).name + " at position:" + position);
+                //TODO: Add open view for task
+            }
+        };
+        todaysComms.setOnItemClickListener(todayCommsListner);
     }
 }
 
-class taskObject {
 
-
-    String name;
-    String description;
-    //java.util.Date dueDate;
-
-}
 
 class taskViewAdapter extends ArrayAdapter<taskObject>
 {
