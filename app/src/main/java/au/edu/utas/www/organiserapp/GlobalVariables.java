@@ -12,6 +12,7 @@ import java.util.Vector;
 public class GlobalVariables extends Application {
 
     private Vector<taskObject> allTasks;
+    private static int currentID = 0;
 
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
@@ -50,5 +51,31 @@ public class GlobalVariables extends Application {
             }
         }
         allTasks.add(i, newTask);
+    }
+
+    //Assigns a task a unique ID on creation.
+    public static int assignID(){
+        return currentID++;
+    }
+
+    //Returns a task matching the ID provided. Returns NULL when task doesn't exist.
+    public taskObject getTaskByID(int id){
+        taskObject task;
+
+        int i = 0;
+        do {
+            task = allTasks.get(i);
+            i++;
+        }while (i < allTasks.size() && task.getID() != id);
+        if(task.getID() == id){
+            return task;
+        }else{
+            return null;
+        }
+    }
+
+    //removes task from list
+    public void completeTask(taskObject task){
+            allTasks.remove(task);
     }
 }
