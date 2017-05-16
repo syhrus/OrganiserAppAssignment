@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("Commitments view", "You clicked Item: " + todayList.get((int)id).name + " at position:" + position);
-                //TODO: Add open view for task
+                Intent openTask = new Intent(MainActivity.this, EditTask.class);
+                openTask.putExtra("Selected", todayList.get((int)id).getID());
+                startActivity(openTask);
             }
         };
         todaysComms.setOnItemClickListener(todayCommsListner);
