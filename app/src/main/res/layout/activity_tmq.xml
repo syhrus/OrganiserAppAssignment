@@ -1021,6 +1021,18 @@
 
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonTmq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get Score" />
+
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
