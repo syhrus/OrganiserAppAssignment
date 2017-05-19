@@ -27,7 +27,6 @@ public class GlobalVariables extends Application {
         if(allTasks == null) {
             //If no tasks exist, create the list
             allTasks = new TaskVector();
-            allTasks = allTasks.load("SavedTasks", this);
         }else{
             //Otherwise just load the data
             allTasks = allTasks.load("SavedTasks", this);
@@ -41,7 +40,6 @@ public class GlobalVariables extends Application {
         if(allTasks == null) {
             //If no tasks exist, create the list
             allTasks = new TaskVector();
-            allTasks = allTasks.load("SavedTasks", this);
         };
         //TODO: Add check to make this select only tasks before the input date
         return allTasks;
@@ -75,15 +73,18 @@ public class GlobalVariables extends Application {
     //Returns a task matching the ID provided. Returns NULL when task doesn't exist.
     public taskObject getTaskByID(int id){
         taskObject task;
-
-        int i = 0;
-        do {
-            task = allTasks.get(i);
-            i++;
-        }while (i < allTasks.size() && task.getID() != id);
-        if(task.getID() == id){
-            return task;
-        }else{
+        if(allTasks != null) {
+            int i = 0;
+            do {
+                task = allTasks.get(i);
+                i++;
+            } while (i < allTasks.size() && task.getID() != id);
+            if (task.getID() == id) {
+                return task;
+            } else {
+                return null;
+            }
+        }else {
             return null;
         }
     }
