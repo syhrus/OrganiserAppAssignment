@@ -1,10 +1,13 @@
 package au.edu.utas.www.organiserapp;
 
+import java.io.Serializable;
+
 /**
  * Created by Rhys on 14/05/2017.
  */
 
-public class taskObject {
+public class taskObject implements Serializable {
+    private static final long serialVersionUID = -291684561391L;
 
 
     public String name;

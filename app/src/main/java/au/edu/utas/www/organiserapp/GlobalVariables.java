@@ -1,6 +1,7 @@
 package au.edu.utas.www.organiserapp;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import java.util.Vector;
@@ -11,14 +12,18 @@ import java.util.Vector;
 
 public class GlobalVariables extends Application {
 
-    private Vector<taskObject> allTasks;
+    private TaskVector allTasks;
     private static int currentID = 0;
 
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
         if(allTasks == null) {
             //If no tasks exist, create the list
-            allTasks = new Vector<taskObject>();
+            allTasks = new TaskVector();
+            allTasks = allTasks.load("SavedTasks", this);
+        }else{
+            //Otherwise just load the data
+            allTasks = allTasks.load("SavedTasks", this);
         };
         return allTasks;
     }
@@ -28,7 +33,8 @@ public class GlobalVariables extends Application {
 
         if(allTasks == null) {
             //If no tasks exist, create the list
-            allTasks = new Vector<taskObject>();
+            allTasks = new TaskVector();
+            allTasks = allTasks.load("SavedTasks", this);
         };
         //TODO: Add check to make this select only tasks before the input date
         return allTasks;
@@ -38,7 +44,7 @@ public class GlobalVariables extends Application {
     public void addNewTask(String name, String description, java.util.Date dueDate, float Urgency){
         taskObject newTask = new taskObject(name, description, dueDate, Urgency);
         if(allTasks == null){
-            allTasks = new Vector<taskObject>();
+            allTasks = new TaskVector();
         }
         int i = 0;
         if(!allTasks.isEmpty()) {
@@ -51,6 +57,7 @@ public class GlobalVariables extends Application {
             }
         }
         allTasks.add(i, newTask);
+        allTasks.save("SavedTasks", this);
     }
 
     //Assigns a task a unique ID on creation.
@@ -77,5 +84,6 @@ public class GlobalVariables extends Application {
     //removes task from list
     public void completeTask(taskObject task){
             allTasks.remove(task);
+        allTasks.save("SavedTasks", this);
     }
 }
