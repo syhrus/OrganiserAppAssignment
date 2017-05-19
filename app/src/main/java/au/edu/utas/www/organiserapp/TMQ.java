@@ -709,8 +709,11 @@ public class TMQ  extends AppCompatActivity {
             score = score + 5;
         }
 
-        Toast.makeText(TMQ.this, "Your score is " + score, Toast.LENGTH_SHORT).show();
+        Toast.makeText(TMQ.this, "Your score is " + score + " out of 90", Toast.LENGTH_SHORT).show();
         Toast.makeText(TMQ.this, "The average score recorded for Third Year ICT Students is 55 ", Toast.LENGTH_SHORT).show();
+
+          ((GlobalVariables) this.getApplication()).setScore(score);
+
 
 
     }

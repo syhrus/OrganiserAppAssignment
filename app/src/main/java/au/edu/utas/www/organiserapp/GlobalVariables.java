@@ -14,6 +14,7 @@ public class GlobalVariables extends Application {
 
     private TaskVector allTasks;
     private static int currentID = 0;
+    private int tmqScore = 0;
 
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
@@ -86,4 +87,15 @@ public class GlobalVariables extends Application {
             allTasks.remove(task);
         allTasks.save("SavedTasks", this);
     }
+
+    public int getScore(){
+
+        return tmqScore;
+    }
+
+    public void setScore(int a){
+
+        tmqScore = a;
+    }
+
 }
