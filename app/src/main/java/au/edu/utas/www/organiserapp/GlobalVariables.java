@@ -4,6 +4,12 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Vector;
 
 /**
@@ -88,14 +94,41 @@ public class GlobalVariables extends Application {
         allTasks.save("SavedTasks", this);
     }
 
-    public int getScore(){
+    public int getScore(String name, Context ctx){
+        try {
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(new File(new File(ctx.getFilesDir(),"")+File.separator+name)));
+            int loaded = (int) input.readObject();
+            input.close();
+            tmqScore = loaded;
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+            tmqScore = 0;
+        }
+        catch(ClassNotFoundException e) {
+            e.printStackTrace();
+            tmqScore = 0;
+        }
 
         return tmqScore;
     }
 
-    public void setScore(int a){
+    public void setScore(int a, String name, Context ctx){
 
         tmqScore = a;
+        try {
+            File file = new File(ctx.getFilesDir(), name);
+            if(!file.exists()) {
+                file.createNewFile();
+            }
+            FileOutputStream fos = ctx.openFileOutput(name, Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(a);
+            oos.close();
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

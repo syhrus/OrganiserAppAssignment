@@ -27,14 +27,6 @@ public class ViewAllTasks extends AppCompatActivity {
         allTasksView = (ListView) findViewById(R.id.AllTasksList);
         taskViewAdapter adapter = new taskViewAdapter(this, android.R.layout.simple_list_item_1,allTasks)  ;
         allTasksView.setAdapter(adapter);
-        AdapterView.OnItemClickListener todayCommsListner = new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i("Commitments view", "You clicked Item: " + allTasks.get((int)id).name + " at position:" + position);
-                //TODO: Add open view for task
-            }
-        };
-        allTasksView.setOnItemClickListener(todayCommsListner);
     }
 
 }
