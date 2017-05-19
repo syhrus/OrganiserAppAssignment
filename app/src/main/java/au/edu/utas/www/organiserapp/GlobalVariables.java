@@ -13,6 +13,7 @@ public class GlobalVariables extends Application {
 
     private Vector<taskObject> allTasks;
     private static int currentID = 0;
+    private int tmqScore = 0;
 
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
@@ -78,4 +79,15 @@ public class GlobalVariables extends Application {
     public void completeTask(taskObject task){
             allTasks.remove(task);
     }
+
+    public int getScore(){
+
+        return tmqScore;
+    }
+
+    public void setScore(int a){
+
+        tmqScore = a;
+    }
+
 }
