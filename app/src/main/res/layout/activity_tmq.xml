@@ -8,12 +8,18 @@
     tools:context="au.edu.utas.www.organiserapp.TMQ">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,35 +57,35 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView4011"
+                    android:id="@+id/textView401gh1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Never" />
 
                 <TextView
-                    android:id="@+id/textView4111"
+                    android:id="@+id/textView4113451"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Rarely" />
 
                 <TextView
-                    android:id="@+id/textView4112"
+                    android:id="@+id/textView4dh112"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Occasionally" />
 
                 <TextView
-                    android:id="@+id/textView4234"
+                    android:id="@+id/textView4thdj234"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Regularly" />
 
                 <TextView
-                    android:id="@+id/textView4983"
+                    android:id="@+id/textView498uik3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -403,35 +409,35 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView4011"
+                    android:id="@+id/textView40yuk511"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Never" />
 
                 <TextView
-                    android:id="@+id/textView4111"
+                    android:id="@+id/textView41vbn11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Rarely" />
 
                 <TextView
-                    android:id="@+id/textView4112"
+                    android:id="@+id/textView41asd12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Occasionally" />
 
                 <TextView
-                    android:id="@+id/textView4234"
+                    android:id="@+id/textView423asd4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Regularly" />
 
                 <TextView
-                    android:id="@+id/textView4983"
+                    android:id="@+id/textView498nmkh3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -485,6 +491,48 @@
                 android:layout_height="wrap_content"
                 android:text="6. Do you have a clear idea of what you want to accomplish during the next week?" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4lkj011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView41lkj11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView411lkj2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView42jkl34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView498jkl3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
+
             <RadioGroup
                 android:id="@+id/radGroup6"
                 android:layout_width="match_parent"
@@ -497,37 +545,31 @@
                     android:id="@+id/radioButton26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -536,6 +578,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="7. Do you set and honor priorities?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView401cvb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView41bvc11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView41cvb12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView42bcgf34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView498bvc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup7"
@@ -550,37 +634,31 @@
                     android:id="@+id/radioButton31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -607,6 +685,48 @@
                 android:layout_height="wrap_content"
                 android:text='1. Do you often find yourself doing things which interfere with your schoolwork simply because you hate to say "No" to people?' />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView401djx1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView41zxc11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView411cxz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView423zxc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView49vzx83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
+
             <RadioGroup
                 android:id="@+id/radGroup8"
                 android:layout_width="match_parent"
@@ -620,36 +740,31 @@
                     android:id="@+id/radioButton36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -658,6 +773,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2. Do you feel you are in charge of your own time, by and large? " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewvxz4011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textViewvxz4111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textViewzxv4112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textViewzxv4234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textViewzxv4983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup9"
@@ -672,37 +829,31 @@
                     android:id="@+id/radioButton41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -711,6 +862,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3. On an average class day do you spend more time with personal grooming than doing schoolwork?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4011uio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView4111uio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView4112uio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView4234uio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView4983uio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup10"
@@ -725,37 +918,31 @@
                     android:id="@+id/radioButton46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton49"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -764,6 +951,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="4. Do you believe that there is room for improvement in the way you manage your time?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView401uio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView411uio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView411uio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView423uio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView498uio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup11"
@@ -778,37 +1007,31 @@
                     android:id="@+id/radioButton51"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton52"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton53"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton55"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -817,6 +1040,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5. Do you make constructive use of your time?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView40uio11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView41uio11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView41uio12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView42uio34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView49uio83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup12"
@@ -831,37 +1096,31 @@
                     android:id="@+id/radioButton56"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton57"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton58"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton59"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -870,6 +1129,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="6. Do you continue unprofitable routines or activities?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4uio011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView4uio111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView4uio112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView4uio234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView4uio983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup13"
@@ -884,37 +1185,31 @@
                     android:id="@+id/radioButton61"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton62"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton63"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton64"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton65"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -941,6 +1236,48 @@
                 android:layout_height="wrap_content"
                 android:text="1. Do you usually keep your desk clear of everything other than what you are currently working on?" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewuio4011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textViewuio4111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textViewuio4112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textViewuio4234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textViewuio4983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
+
             <RadioGroup
                 android:id="@+id/radGroup14"
                 android:layout_width="match_parent"
@@ -954,37 +1291,31 @@
                     android:id="@+id/radioButton66"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton67"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton68"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton69"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton70"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -993,6 +1324,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2. Do you have a set of goals for the entire quarter? " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewqwe4011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textViewqwe4111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textViewqwe4112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textViewqwe4234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textViewqwe4983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup15"
@@ -1007,37 +1380,31 @@
                     android:id="@+id/radioButton71"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton72"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton73"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton74"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton75"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -1046,6 +1413,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3. The night before a major assignment is due, are you usually still working on it? " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4qwe011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView4qwe111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView4qwe112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView4qwe234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView4qwe983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup16"
@@ -1060,37 +1469,31 @@
                     android:id="@+id/radioButton76"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton77"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton78"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton79"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton80"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -1099,6 +1502,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="4. When you have several things to do, do you think it is best to do a little bit of work on each one? " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView40qwe11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView41qwe11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView41qwe12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView42qwe34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView49qwe83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup17"
@@ -1113,37 +1558,31 @@
                     android:id="@+id/radioButton81"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton82"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton83"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton84"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton85"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
@@ -1152,6 +1591,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5. Do you regularly review your class notes, even when a test is not imminent? " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4011"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Never" />
+
+                <TextView
+                    android:id="@+id/textView4111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rarely" />
+
+                <TextView
+                    android:id="@+id/textView4112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Occasionally" />
+
+                <TextView
+                    android:id="@+id/textView4234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Regularly" />
+
+                <TextView
+                    android:id="@+id/textView4983"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Always" />
+
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radGroup18"
@@ -1166,37 +1647,31 @@
                     android:id="@+id/radioButton86"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Never" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton87"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Rare" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton88"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Occasionally" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton89"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Regularly"
-                    tools:text="4" />
+                    android:layout_weight="1" />
 
                 <RadioButton
                     android:id="@+id/radioButton90"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Always" />
+                    android:layout_weight="1" />
 
             </RadioGroup>
 
