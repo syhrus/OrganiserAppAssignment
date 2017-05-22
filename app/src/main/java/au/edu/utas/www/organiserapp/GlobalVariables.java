@@ -166,7 +166,6 @@ public class GlobalVariables extends Application {
             e.printStackTrace();
             tmqScore = 0;
         }
-
         return tmqScore;
     }
 

@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         // Create a calendar object that will convert the date and time value in milliseconds to date.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
+        ((GlobalVariables) this.getApplication()).getAllTasks();
         todayList = ((GlobalVariables) this.getApplication()).getTasksBeforeDate(calendar.getTime());
         todaysComms = (ListView) findViewById(R.id.TodayCommitmentsList);
         taskViewAdapter adapter = new taskViewAdapter(this, android.R.layout.simple_list_item_1,todayList)  ;
@@ -92,7 +94,12 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         priorityView.setOnItemClickListener(priorityListner);
+
+        TextView TMQScore = (TextView) findViewById(R.id.TMQScore);
+        TMQScore.setText("TMQ SCORE: " + ((GlobalVariables) this.getApplication()).getScore("TMQScore", this));
     }
+
+
 }
 
 
