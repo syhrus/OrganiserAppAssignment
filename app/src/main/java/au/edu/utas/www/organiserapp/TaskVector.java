@@ -44,11 +44,11 @@ public class TaskVector extends Vector<taskObject> implements Serializable{
         }
         catch(IOException e) {
             e.printStackTrace();
-            return null;
+            return new TaskVector();
         }
         catch(ClassNotFoundException e) {
             e.printStackTrace();
-            return null;
+            return new TaskVector();
         }
     }
 }

@@ -6,11 +6,13 @@ import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 
 import static java.lang.System.in;
@@ -25,14 +27,29 @@ public class GlobalVariables extends Application {
     private static int currentID = 0;
     private int tmqScore = 0;
 
+    //Catches first-use error where tasks aren't working right.
+    public void SetUpGlobals(){
+        allTasks = new TaskVector();
+        allTasks.load("SavedTasks", this);
+        if(allTasks == null){
+            allTasks = new TaskVector();
+            allTasks.save("SavedTasks", this);
+        }
+
+    }
+
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
+        Log.d("Loading", "start");
         if(allTasks == null) {
             //If no tasks exist, create the list
             allTasks = new TaskVector();
+            Log.d("Loading", "made new list");
         }else{
             //Otherwise just load the data
+            Log.d("Loading", "loading old list " + allTasks);
             allTasks = allTasks.load("SavedTasks", this);
+            Log.d("Loading", "loaded old list " + allTasks);
         };
         return allTasks;
     }
@@ -180,6 +197,68 @@ public class GlobalVariables extends Application {
         catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<taskObject> filterTasksImportanceGreaterThan(List<taskObject> list, int greaterthan){
+        List<taskObject> filtered = new Vector<taskObject>();
+        if(list != null) {
+            if (!list.isEmpty()) {
+                for (int i = 0; i < list.size(); i++) {
+                    if (list.get(i).urgency > greaterthan) {
+                        Log.d("Importance > filter", "" + list.get(i).toString() + "  Added");
+                        filtered.add(list.get(i));
+                    }
+                }
+            }
+        }
+        return filtered;
+    }
+    public List<taskObject> filterTasksImportanceLessThan(List<taskObject> list, int lessthan){
+        List<taskObject> filtered = new Vector<taskObject>();
+        if(list != null) {
+            if (!list.isEmpty()) {
+                for (int i = 0; i < list.size(); i++) {
+                    Log.d("Importance < filter", "" + list.get(i).toString() + "importance " + list.get(i).urgency);
+                    if (list.get(i).urgency < lessthan) {
+                        Log.d("Importance < filter", "" + list.get(i).toString() + "  Added");
+                        filtered.add(list.get(i));
+                    }
+                }
+            }
+        }
+        return filtered;
+    }
+    public List<taskObject> filterTasksDaysGreaterThan(List<taskObject> list, int greaterthan){
+        List<taskObject> filtered = new Vector<taskObject>();
+        if(list != null) {
+            if (!list.isEmpty()) {
+                for (int i = 0; i < list.size(); i++) {
+                    int daystogo = (int) ((list.get(i).dueDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+                    Log.d("Days < filter", "" + list.get(i).toString() + " days to go " + daystogo);
+                    if (daystogo > greaterthan) {
+                        Log.d("Days > filter", "" + list.get(i).toString() + "  Added");
+                        filtered.add(list.get(i));
+                    }
+                }
+            }
+        }
+        return filtered;
+    }
+    public List<taskObject> filterTasksDaysLessThan(List<taskObject> list, int lessthan){
+        List<taskObject> filtered = new Vector<taskObject>();
+        if(list != null) {
+            if (!list.isEmpty()) {
+                for (int i = 0; i < list.size(); i++) {
+                    int daystogo = (int) ((list.get(i).dueDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+                    Log.d("Days < filter", "" + list.get(i).toString() + "  days to go " + daystogo);
+                    if (daystogo < lessthan) {
+                        Log.d("Days < filter", "" + list.get(i).toString() + "  Added");
+                        filtered.add(list.get(i));
+                    }
+                }
+            }
+        }
+        return filtered;
     }
 
 }
