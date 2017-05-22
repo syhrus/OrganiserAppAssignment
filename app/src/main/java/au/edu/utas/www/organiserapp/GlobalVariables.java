@@ -27,17 +27,6 @@ public class GlobalVariables extends Application {
     private static int currentID = 0;
     private int tmqScore = 0;
 
-    //Catches first-use error where tasks aren't working right.
-    public void SetUpGlobals(){
-        allTasks = new TaskVector();
-        allTasks.load("SavedTasks", this);
-        if(allTasks == null){
-            allTasks = new TaskVector();
-            allTasks.save("SavedTasks", this);
-        }
-
-    }
-
     //Returns all tasks
     public Vector<taskObject> getAllTasks() {
         Log.d("Loading", "start");

@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((GlobalVariables) this.getApplication()).SetUpGlobals();
-
         Button tmqBtn = (Button)findViewById(R.id.TMQButton);
 
         tmqBtn.setOnClickListener(new View.OnClickListener() {
