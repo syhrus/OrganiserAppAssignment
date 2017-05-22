@@ -48,7 +48,7 @@ public class taskObject implements Serializable {
     }
     @Override
     public String toString() {
-        return this.name;
+        return this.name + " DUE: " + this.dueDate.getDate() + "/" + (this.dueDate.getMonth() + 1) + "/" + (this.dueDate.getYear() + 1900);
     }
 
 
