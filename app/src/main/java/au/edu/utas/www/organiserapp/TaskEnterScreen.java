@@ -11,6 +11,7 @@ import android.widget.SeekBar;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class TaskEnterScreen extends AppCompatActivity {
 
@@ -18,6 +19,9 @@ public class TaskEnterScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_enter_screen);
+        EditText dateText = (EditText) findViewById(R.id.TaskDateInput);
+        Date date = new Date();
+        dateText.setText("" + date.getDate() + "/" + (date.getMonth() + 1) + "/" + (date.getYear() + 1900));
     }
 
     public void createTask(View view) throws ParseException {

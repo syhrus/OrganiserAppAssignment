@@ -63,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
         // Create a calendar object that will convert the date and time value in milliseconds to date.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-
         todayList = ((GlobalVariables) this.getApplication()).getTasksBeforeDate(calendar.getTime());
-
         todaysComms = (ListView) findViewById(R.id.TodayCommitmentsList);
         taskViewAdapter adapter = new taskViewAdapter(this, android.R.layout.simple_list_item_1,todayList)  ;
         todaysComms.setAdapter(adapter);
@@ -79,6 +77,21 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         todaysComms.setOnItemClickListener(todayCommsListner);
+
+        final List<taskObject> priorityList = ((GlobalVariables) this.getApplication()).getTasksByPriority(2, 3);
+        ListView priorityView = (ListView) findViewById(R.id.UpcomingDeadlinesList);
+        taskViewAdapter priorityAdaptor = new taskViewAdapter(this, android.R.layout.simple_list_item_1,priorityList)  ;
+        priorityView.setAdapter(priorityAdaptor);
+        AdapterView.OnItemClickListener priorityListner = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Commitments view", "You clicked Item: " + priorityList.get((int)id).name + " at position:" + position);
+                Intent openTask = new Intent(MainActivity.this, EditTask.class);
+                openTask.putExtra("Selected", priorityList.get((int)id).getID());
+                startActivity(openTask);
+            }
+        };
+        priorityView.setOnItemClickListener(priorityListner);
     }
 }
 

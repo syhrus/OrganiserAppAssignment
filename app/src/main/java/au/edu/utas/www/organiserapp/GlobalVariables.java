@@ -10,7 +10,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Date;
 import java.util.Vector;
+
+import static java.lang.System.in;
 
 /**
  * Created by Rhys on 14/05/2017.
@@ -36,13 +39,43 @@ public class GlobalVariables extends Application {
 
     //Returns all tasks due before the input date.
     public Vector<taskObject> getTasksBeforeDate(java.util.Date maxDate){
-
+        Vector<taskObject> tasksBefore = new TaskVector();
         if(allTasks == null) {
             //If no tasks exist, create the list
             allTasks = new TaskVector();
-        };
-        //TODO: Add check to make this select only tasks before the input date
-        return allTasks;
+        }else {
+            for (int i = 0; i<allTasks.size(); i++) {
+                if(allTasks.get(i).dueDate.before(maxDate) || allTasks.get(i).dueDate.equals(maxDate))
+                    tasksBefore.add(allTasks.get(i));
+            }
+        }
+        return tasksBefore;
+    }
+
+    //Returns a certain number of tasks in order of importance vs due date
+    public Vector<taskObject> getTasksByPriority(float threshhold, int maxnum){
+        Vector<taskObject> priorityTasks = new Vector<taskObject>();
+        if(allTasks == null){
+            //make list exist if it doesn't
+            allTasks = new TaskVector();
+        }
+        for (int i = 0; i<allTasks.size(); i++){
+            //Use importance and duedate to determine importance
+            taskObject current = allTasks.get(i);
+            float importance;
+            if(current.urgency<1){
+                //To avoid divide-by-zero errors
+                importance = 1;
+            }else{
+                importance = current.urgency;
+            }
+            int daystogo = (int)( (current.dueDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+            int priority = (int) (daystogo/importance);
+            if(priority <= threshhold && priorityTasks.size() < maxnum)
+                priorityTasks.add(allTasks.get(i));
+        }
+
+        return priorityTasks;
     }
 
     //Creates a new task and adds it to the list
@@ -55,11 +88,11 @@ public class GlobalVariables extends Application {
         if(!allTasks.isEmpty()) {
             taskObject current = allTasks.get(i);
             //Add tasks in date order to make sorting faster later.
-            while (current != null && current.dueDate.after(newTask.dueDate)) {
+            do {
                 //Traverse until date is after the one being added
-                i++;
                 current = allTasks.get(i);
-            }
+                i++;
+            } while (i < allTasks.size() && current.dueDate.before(newTask.dueDate));
         }
         allTasks.add(i, newTask);
         allTasks.save("SavedTasks", this);
