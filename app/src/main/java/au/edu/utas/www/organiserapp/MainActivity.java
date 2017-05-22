@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         };
         todaysComms.setOnItemClickListener(todayCommsListner);
 
-        final List<taskObject> priorityList = ((GlobalVariables) this.getApplication()).getTasksByPriority(2, 3);
+        final List<taskObject> priorityList = ((GlobalVariables) this.getApplication()).getTasksByPriority(2);
         ListView priorityView = (ListView) findViewById(R.id.UpcomingDeadlinesList);
         taskViewAdapter priorityAdaptor = new taskViewAdapter(this, android.R.layout.simple_list_item_1,priorityList)  ;
         priorityView.setAdapter(priorityAdaptor);

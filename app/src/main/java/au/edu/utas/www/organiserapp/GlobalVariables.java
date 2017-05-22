@@ -53,7 +53,7 @@ public class GlobalVariables extends Application {
     }
 
     //Returns a certain number of tasks in order of importance vs due date
-    public Vector<taskObject> getTasksByPriority(float threshhold, int maxnum){
+    public Vector<taskObject> getTasksByPriority(float threshhold){
         Vector<taskObject> priorityTasks = new Vector<taskObject>();
         if(allTasks == null){
             //make list exist if it doesn't
@@ -71,8 +71,25 @@ public class GlobalVariables extends Application {
             }
             int daystogo = (int)( (current.dueDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
             int priority = (int) (daystogo/importance);
-            if(priority <= threshhold && priorityTasks.size() < maxnum)
-                priorityTasks.add(allTasks.get(i));
+            if(priority <= threshhold) {
+                if(!priorityTasks.isEmpty()){
+                    boolean found = false;
+                    int ii = 0;
+                    while(!found){
+                        taskObject current2 = priorityTasks.get(ii);
+                        int daystogo2 = (int)( (current2.dueDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+                        int priority2 = (int) (daystogo2/current2.urgency);
+                        if(priority>priority2){
+                            ii++;
+                        }else{
+                            priorityTasks.add(ii, allTasks.get(i));
+                            found = true;
+                        }
+                    }
+                }else {
+                    priorityTasks.add(allTasks.get(i));
+                }
+            }
         }
 
         return priorityTasks;
