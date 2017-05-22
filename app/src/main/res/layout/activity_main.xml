@@ -48,7 +48,9 @@
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ListView
         android:layout_width="0dp"
@@ -59,7 +61,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/UpcomingDeadlinesList" />
+        android:id="@+id/UpcomingDeadlinesList"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/AddAppointmentButton"
@@ -71,27 +75,31 @@
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/ViewAllTasksButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="View All Tasks"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList" />
+        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/TMQButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Time Management Quiz"
-        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList"
         app:layout_constraintLeft_toRightOf="@+id/ViewAllTasksButton"
-        android:layout_marginLeft="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList" />
 
     <TextView
         android:id="@+id/TMQScore"
