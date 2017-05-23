@@ -88,7 +88,7 @@ public class GlobalVariables extends Application {
                         if(priority>priority2){
                             ii++;
                         }else{
-                            priorityTasks.add(ii, allTasks.get(i));
+                            priorityTasks.insertElementAt(allTasks.get(i),ii);
                             found = true;
                         }
                     }

@@ -81,9 +81,9 @@
 
     <Button
         android:id="@+id/ViewAllTasksButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         android:text="View All Tasks"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -92,14 +92,17 @@
 
     <Button
         android:id="@+id/TMQButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Time Management Quiz"
         app:layout_constraintLeft_toRightOf="@+id/ViewAllTasksButton"
-        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList" />
+        app:layout_constraintTop_toBottomOf="@+id/UpcomingDeadlinesList"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.32" />
 
     <TextView
         android:id="@+id/TMQScore"
