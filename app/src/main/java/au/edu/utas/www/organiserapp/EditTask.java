@@ -51,6 +51,9 @@ public class EditTask extends AppCompatActivity {
             e.printStackTrace();
         }
         thisTask.changeTask(titleText.getText().toString(), descText.getText().toString(), dueDate, importance.getProgress());
+        ((GlobalVariables) this.getApplication()).completeTask(thisTask);
+        ((GlobalVariables) this.getApplication()).addNewTask(thisTask.name, thisTask.description, thisTask.dueDate, thisTask.urgency);
+
         startActivity(new Intent(EditTask.this, MainActivity.class));
     }
     public void discardChanges(View view) {

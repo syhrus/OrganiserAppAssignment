@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button tmqBtn = (Button)findViewById(R.id.TMQButton);
 
+        ((GlobalVariables) this.getApplication()).getAllTasks();
+        
         tmqBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
